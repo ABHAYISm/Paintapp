@@ -36,9 +36,7 @@ public class Login extends AppCompatActivity {
         button=findViewById(R.id.button);
         auth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
-        if(getSupportActionBar()!=null){
-            getSupportActionBar().hide();
-        }
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

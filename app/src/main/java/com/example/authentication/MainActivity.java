@@ -56,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
         imgsave=findViewById(R.id.btnsave);
         seekBar=findViewById(R.id.pensize);
         txtpensize=findViewById(R.id.txtPensize);
-        if(getSupportActionBar()!=null){
-            getSupportActionBar().hide();
-        }
+
 
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String date =format.format(new Date());
@@ -126,7 +124,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-
+        intent.putExtra(Intent.EXTRA_SUBJECT,"check out this cool application");
+        intent.putExtra(Intent.EXTRA_TEXT," Your application link here");
+        startActivity(Intent.createChooser(intent, "Share Via "));
         return super.onOptionsItemSelected(item);
     }
 
