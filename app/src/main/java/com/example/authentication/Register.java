@@ -38,6 +38,9 @@ public class Register extends AppCompatActivity {
         loginbtn=findViewById(R.id.loginbtn);
         auth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().hide();
+        }
 
         if(auth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));

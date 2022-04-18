@@ -8,10 +8,13 @@
 
     <com.github.gcacace.signaturepad.views.SignaturePad
         android:id="@+id/signature_pad"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/optionholder"
-        android:layout_marginBottom="101dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="6dp"
         app:penColor="@android:color/black" />
 
     <LinearLayout
@@ -26,25 +29,83 @@
             android:layout_margin="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <SeekBar
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
+                android:id="@+id/pensize"
                 android:layout_width="1dp"
-                android:layout_height="wrap_content">
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1">
 
             </SeekBar>
+            <TextView
+                android:id="@+id/txtPensize"
+                android:textColor="@color/black"
+                android:text="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btneraser"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_eraser"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                tools:ignore="Suspicious0dp" >
+
+            </ImageButton>
+            <ImageButton
+                android:id="@+id/btncolor"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_color"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                tools:ignore="Suspicious0dp" >
+
+            </ImageButton>
+            <ImageButton
+                android:id="@+id/btnsave"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_save"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                tools:ignore="Suspicious0dp" >
+
+            </ImageButton>
+
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="169dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="241dp"
-        android:layout_marginBottom="683dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="278dp"
+        android:layout_marginBottom="686dp"
         android:onClick="logout"
         android:text="Logout" />
 
